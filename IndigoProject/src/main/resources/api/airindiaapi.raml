@@ -1,0 +1,57 @@
+#%RAML 1.0
+title: airindiaapi
+baseUri: http://localhost:8081/api
+/airIndiaFlights:
+  get:
+    queryParameters:
+      source:
+        example: HYD
+      destination:
+        example: BANG
+      doj:
+        example: 30-Nov-2021
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+                  [
+                            {
+                                "ID": "201",
+                                "airline": "AirIndia",
+                                "fCode": "AI201",
+                                "fromAirportCode": "hyd",
+                                "toAirportCode": "BANG",
+                                "departureDate": "30-Nov-2021",
+                                "emptySeats": "0",
+                                "totalSeats": 200,
+                                "price": "199",
+                                "planeType": "AirIndia 737"
+                            },
+                            {
+                                "ID": "202",
+                                "airline": "AirIndia",
+                                "fCode": "AI202",
+                                "fromAirportCode": "hyd",
+                                "toAirportCode": "BANG",
+                                "departureDate": "30-Nov-2021",
+                                "emptySeats": "24",
+                                "totalSeats": 350,
+                                "price": "450",
+                                "planeType": "AirIndia 747"
+                            },
+                            {
+                                "ID": "203",
+                                "airline": "AirIndia",
+                                "fCode": "AI203",
+                                "fromAirportCode": "hyd",
+                                "toAirportCode": "BANG",
+                                "departureDate": "30-Nov-2021",
+                                "emptySeats": "33",
+                                "totalSeats": 400,
+                                "price": "450",
+                                "planeType": "AirIndia 757"
+                            }
+                     ]
+          
+        
